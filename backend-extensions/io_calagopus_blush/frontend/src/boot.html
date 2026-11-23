@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Petalnodes Panel...</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FCE7EF' stroke='%23F7BDD2' stroke-width='2'/%3E%3Cpath d='M16 5.5C19 8.8 20.8 12 20.8 15C20.8 17.8 18.7 20 16 20C13.3 20 11.2 17.8 11.2 15C11.2 12 13 8.8 16 5.5Z' fill='%23F4A6C1' stroke='%238E2E52' stroke-width='1.8'/%3E%3Ccircle cx='16' cy='15.8' r='2' fill='%238E2E52'/%3E%3C/svg%3E"
+    />
+    <style>
+      :root {
+        --blush-bg: #fff8fa;
+        --blush-surface: #ffffff;
+        --blush-border: #eee5e9;
+        --blush-primary: #f4a6c1;
+        --blush-soft: #fce7ef;
+        --blush-text: #29232a;
+        --blush-muted: #777078;
+        --blush-accent: #8e2e52;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--blush-bg);
+        color: var(--blush-text);
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      }
+
+      .boot-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 28px 36px;
+        background: var(--blush-surface);
+        border: 1px solid var(--blush-border);
+        border-radius: 12px;
+        box-shadow: 0 1px 3px rgba(41, 35, 42, 0.04);
+      }
+
+      .boot-brand {
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--blush-text);
+      }
+
+      .boot-spinner {
+        width: 24px;
+        height: 24px;
+        border: 2.5px solid var(--blush-soft);
+        border-top-color: var(--blush-primary);
+        border-radius: 9999px;
+        animation: blush-spin 0.75s linear infinite;
+      }
+
+      .boot-label {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--blush-muted);
+        letter-spacing: 0.01em;
+      }
+
+      @keyframes blush-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .boot-spinner {
+          animation: none;
+          border-top-color: var(--blush-primary);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boot-card" role="status" aria-live="polite">
+      <span class="boot-brand">Petalnodes</span>
+      <div class="boot-spinner" aria-hidden="true"></div>
+      <span class="boot-label">Loading panel interface...</span>
+    </div>
+  </body>
+</html>

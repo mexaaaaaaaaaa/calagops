@@ -1,0 +1,10 @@
+[package]
+name = "io_calagopus_blush"
+version = "0.2.0"
+edition = "2021"
+authors = ["Petalnodes"]
+description = "Petalnodes baby-pink custom theme extension package for Calagopus Panel."
+license = "MIT"
+
+[lib]
+crate-type = ["rlib"]
